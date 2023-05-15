@@ -3,6 +3,8 @@ upperStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 numStr = "0123456789"
 otherStr = "!@#$%^&*()_+=-`~[]|:;\"\'<>,.?/"
 
+#https://www.uic.edu/apps/strong-password/
+
 pw = input("Please input your password: ")
 point = 0
 
