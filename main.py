@@ -25,6 +25,8 @@ for i in range(len(pw)):
 
 # https://www.uic.edu/apps/strong-password/
 
+# addition
+
 # 문자 수 Number of characters
 point += len(pw) * 4
 # 전체 - 대문자 수 Uppercase letters
@@ -57,6 +59,31 @@ if num != 0:
     point += 2
 if other != 0:
     point += 2
+
+# deduction
+if other == 0 and num == 0:
+    point -= len(pw)
+if upper == 0 and lower == 0 and other == 0:
+    point -= len(pw)
+if upper == 0 and lower == 0 and num == 0:
+    point -= len(pw)
+# repeat chracters
+if upper == 0:
+    point -= len(pw) * 2
+if lower == 0:
+    point -= len(pw) * 2
+if num == 0:
+    point -= len(pw) * 2
+
+for i in range(len(lowerStr) - 2):
+    if lowerStr[i:i + 3] in pw.lower():
+        point -= 3
+for i in range(len(num)):
+    if numStr[i:i + 3] in pw:
+        point -= 3
+for i in range(len(otherStr) - 2):
+    if otherStr[i:i + 3] in pw:
+        point -= 3
 
 print(point)
 
